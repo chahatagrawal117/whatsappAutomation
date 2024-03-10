@@ -48,11 +48,11 @@ def send_message(phone_number, msg, image_path):
         if image_path == "":
             pywhatkit.sendwhatmsg(phone_no=phone_number, message=msg, time_hour=current_hour,
                                   time_min=current_minute + 1,
-                                  tab_close=True, wait_time=30)
+                                  tab_close=True, wait_time=45, close_time=5)
             # time.sleep(5)
         else:
             pywhatkit.sendwhats_image(receiver=phone_number, img_path=IMAGE_FILE_PATH, caption=msg, tab_close=True,
-                                      wait_time=30)
+                                      wait_time=45, close_time=5)
 
         return True
 
